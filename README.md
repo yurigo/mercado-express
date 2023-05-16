@@ -114,13 +114,26 @@ GET /products?limit=10&page=10&offset=20&columns=name,description,stock
 ```
 
 ```
-GET /products?search=loquequirobuscar
+GET /products?search=loquequierobuscar
 ```
 
-
+Ejemplo de búsqueda:
+```
+-- PRODUCTS --
 id: 1
 nombre: playstation 5
 descripcion: ps5, consola playstation 5. 
+```
+
+```
+SELECT * FROM products
+WHERE 
+   name LIKE '%params.search%' OR
+   description LIKE '%params.search%'
+
+```
+
+
 
 ### crear categorias
 
