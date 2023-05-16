@@ -49,11 +49,127 @@ TBD
 ## Enpoints // Representaciones
 
 ### crear productos
+
+```
+POST /products/
+{
+    name
+    description
+    image_url
+    url
+    price
+    stock
+    category: [ 1 , 2 , 3 ]
+}
+```
+
 ### editar productos
+
+```
+PUT /products/:id
+{
+    name
+    description
+    image_url
+    url
+    price
+    stock
+    category: [ 1 , 2 , 3 ]
+}
+```
+
+
+
 ### desactivar productos
-### buscar productos (por nombre y descripción)
+```
+DELETE /products/:id
+```
+Hacemos un borrado lógico: Update de la tabla products y pondrá el delete en true.
+
 ### visualizar productos
+```
+GET /products?page=10&offset=20
+GET /products?limit=10&page=10&offset=20&columns=name,description,stock
+```
+
+### visualizar UN producto
+```
+GET /products/:id
+```
+
+### buscar productos (por nombre y/o descripción)
+```
+GET /products/search
+{
+    criteria
+}
+```
+
+```
+GET /products/search/:criteria
+```
+
+```
+GET /products?limit=10&page=10&offset=20&columns=name,description,stock
+```
+
+```
+GET /products?search=loquequirobuscar
+```
+
+
+id: 1
+nombre: playstation 5
+descripcion: ps5, consola playstation 5. 
+
 ### crear categorias
+
+```
+POST /categories
+{
+    name
+    description
+    image_url
+    // será categoría raiz
+}
+
+POST /categories
+{
+    name
+    description
+    image_url
+    parent_id // <-- será hijo de
+}
+```
+
+
 ### editar categorias
+
+```
+PUT /categories/:id
+{
+    name
+    description
+    image_url
+    parent_id
+}
+```
+
 ### eliminar categorias
+```
+DELETE /categories/:id
+```
+
+
+### visualizar categoria
+
+```
+GET /categories/:id
+```
+
 ### visualizar categorias
+
+```
+GET /categories
+```
+
