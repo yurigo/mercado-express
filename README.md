@@ -1,12 +1,12 @@
 # mercado-express
-Gestion de productos/regalos para social-gift
+Gestion de productos/regalos para social-gift u otro servicio...
 
 ## Gestion de productos 
 
 - crear productos
 - editar productos
 - desactivar productos
-- buscar productos
+- buscar productos (por nombre y descripción)
 - visualizar productos
 
 ## Gestion de categorias
@@ -32,8 +32,6 @@ TBD
 | price |
 | stock |
 | deleted |
-<!-- | categories <Array> |
-| categories <JSON> | -->
 
 | CATEGORIES |
 | --- |
@@ -47,3 +45,15 @@ TBD
 | --- |
 | product_id |
 | category_id |
+
+## Enpoints // Representaciones
+
+### crear productos
+### editar productos
+### desactivar productos
+### buscar productos (por nombre y descripción)
+### visualizar productos
+### crear categorias
+### editar categorias
+### eliminar categorias
+### visualizar categorias
